@@ -1,0 +1,31 @@
+git bash
+mkdir file                       /**创建文件*/
+git init                         /**创建版本库*/
+ls -ah                           /**ls即list  -a是参数all h即hide*/
+git add file.txt                 /**将file.txt放入版本库*/
+git commit -m  "版本描述"        /**提交并写入说明*/
+git status                       /**查看当前文件状态*/
+git diff                         /**查看差异*/
+git log --pretty=oneline         /**查看版本，参数--pretty=oneline*/
+git reset --hard HEAD^           /**回滚上一版本*/
+git reset --hard HEAD`100        /**返回上100版本*/
+git reflog                       /**查看操作命令*/
+git reset --hard 5005304         /**返回版本号5005304*/
+git diff HEAD --file.txt         /**查看工作区和版本库的区别*/
+git add file.txt                 /**将工作区添加到暂存区*/
+git commit                       /**将暂存区添加到版本库*/
+git diff HEAD --file.txt         /**查看工作区和版本库里面最新版本的区别*/
+git checkout -- file.txt         /**撤销工作区的修改*/
+git reset HEAD file.txt          /**可以把暂存区的修改撤销掉*/
+rm file.txt                      /**删除文件file.txt*/
+ssh-keygen -t rsa -C "273074720linchao@sina.com"    /**创建SSH Key*/
+在github上面添加公匙
+git remote add origin git@github.com:linisme/learn-git.git     /**建立远程仓库*/
+git push -u origin master       /**推送到远端仓库，参数u将本地master和远端master建立连接，以后可以直接                                  推送*/
+git push origin master          /**推送远端*/
+git remote add origin git@server-name:path/repo-name.git  /**关联远程库*/
+git clone git@github.com:linisme/repositories.git         /**从github仓库中克隆到本地*/
+
+
+
+
