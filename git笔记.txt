@@ -21,11 +21,16 @@ rm file.txt                      /**删除文件file.txt*/
 ssh-keygen -t rsa -C "273074720linchao@sina.com"    /**创建SSH Key*/
 在github上面添加公匙
 git remote add origin git@github.com:linisme/learn-git.git     /**建立远程仓库*/
-git push -u origin master       /**推送到远端仓库，参数u将本地master和远端master建立连接，以后可以直接                                  推送*/
-git push origin master          /**推送远端*/
+git push -u origin master        /**推送到远端仓库，参数u将本地master和远端master建立连接，以后可以直                                  接推送*/
+git push origin master           /**推送远端*/
 git remote add origin git@server-name:path/repo-name.git  /**关联远程库*/
 git clone git@github.com:linisme/repositories.git         /**从github仓库中克隆到本地*/
-
+git checkout -b dev               /**创建分支dev，参数-b表示创建并切换*/
+git branch dev                    /**创建分支dev*/
+git checkout dev                  /**切换到分支dev*/
+git merge dev                     /**把dev分支合并到当前分支，快速合并直接把当前分支指向dev分支*/
+git branch -d dev                 /**删除分支dev*/
+git log --graph --pretty-oneline --abbrev-commit  /**查看分支合并图*/
 
 
 
