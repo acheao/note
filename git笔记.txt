@@ -1,30 +1,30 @@
 git bash
-mkdir file                       /**´´½¨ÎÄ¼ş*/
-git init                         /**´´½¨°æ±¾¿â*/
-ls -ah                           /**ls¼´list  -aÊÇ²ÎÊıall h¼´hide*/
-git add file.txt                 /**½«file.txt·ÅÈë°æ±¾¿â*/
-git commit -m  "°æ±¾ÃèÊö"        /**Ìá½»²¢Ğ´ÈëËµÃ÷*/
-git status                       /**²é¿´µ±Ç°ÎÄ¼ş×´Ì¬*/
-git diff                         /**²é¿´²îÒì*/
-git log --pretty=oneline         /**²é¿´°æ±¾£¬²ÎÊı--pretty=oneline*/
-git reset --hard HEAD^           /**»Ø¹öÉÏÒ»°æ±¾*/
-git reset --hard HEAD`100        /**·µ»ØÉÏ100°æ±¾*/
-git reflog                       /**²é¿´²Ù×÷ÃüÁî*/
-git reset --hard 5005304         /**·µ»Ø°æ±¾ºÅ5005304*/
-git diff HEAD --file.txt         /**²é¿´¹¤×÷ÇøºÍ°æ±¾¿âµÄÇø±ğ*/
-git add file.txt                 /**½«¹¤×÷ÇøÌí¼Óµ½Ôİ´æÇø*/
-git commit                       /**½«Ôİ´æÇøÌí¼Óµ½°æ±¾¿â*/
-git diff HEAD --file.txt         /**²é¿´¹¤×÷ÇøºÍ°æ±¾¿âÀïÃæ×îĞÂ°æ±¾µÄÇø±ğ*/
-git checkout -- file.txt         /**³·Ïú¹¤×÷ÇøµÄĞŞ¸Ä*/
-git reset HEAD file.txt          /**¿ÉÒÔ°ÑÔİ´æÇøµÄĞŞ¸Ä³·Ïúµô*/
-rm file.txt                      /**É¾³ıÎÄ¼şfile.txt*/
-ssh-keygen -t rsa -C "273074720linchao@sina.com"    /**´´½¨SSH Key*/
-ÔÚgithubÉÏÃæÌí¼Ó¹«³×
-git remote add origin git@github.com:linisme/learn-git.git     /**½¨Á¢Ô¶³Ì²Ö¿â*/
-git push -u origin master       /**ÍÆËÍµ½Ô¶¶Ë²Ö¿â£¬²ÎÊıu½«±¾µØmasterºÍÔ¶¶Ëmaster½¨Á¢Á¬½Ó£¬ÒÔºó¿ÉÒÔÖ±½Ó                                  ÍÆËÍ*/
-git push origin master          /**ÍÆËÍÔ¶¶Ë*/
-git remote add origin git@server-name:path/repo-name.git  /**¹ØÁªÔ¶³Ì¿â*/
-git clone git@github.com:linisme/repositories.git         /**´Ógithub²Ö¿âÖĞ¿ËÂ¡µ½±¾µØ*/
+mkdir file                                                    /**åˆ›å»ºæ–‡ä»¶*/
+git init                                                      /**åˆ›å»ºç‰ˆæœ¬åº“*/
+ls -ah                                                        /**lså³list  -aæ˜¯å‚æ•°all hå³hide*/
+git add file.txt                                              /**å°†file.txtæ”¾å…¥ç‰ˆæœ¬åº“*/
+git commit -m  "ç‰ˆæœ¬æè¿°"                                      /**æäº¤å¹¶å†™å…¥è¯´æ˜*/
+git status                                                    /**æŸ¥çœ‹å½“å‰æ–‡ä»¶çŠ¶æ€*/
+git diff                                                      /**æŸ¥çœ‹å·®å¼‚*/
+git log --pretty=oneline                                      /**æŸ¥çœ‹ç‰ˆæœ¬ï¼Œå‚æ•°--pretty=oneline*/
+git reset --hard HEAD^                                        /**å›æ»šä¸Šä¸€ç‰ˆæœ¬*/
+git reset --hard HEAD`100                                     /**è¿”å›ä¸Š100ç‰ˆæœ¬*/
+git reflog                                                    /**æŸ¥çœ‹æ“ä½œå‘½ä»¤*/
+git reset --hard 5005304                                      /**è¿”å›ç‰ˆæœ¬å·5005304*/
+git diff HEAD --file.txt                                      /**æŸ¥çœ‹å·¥ä½œåŒºå’Œç‰ˆæœ¬åº“çš„åŒºåˆ«*/
+git add file.txt                                              /**å°†å·¥ä½œåŒºæ·»åŠ åˆ°æš‚å­˜åŒº*/
+git commit                                                    /**å°†æš‚å­˜åŒºæ·»åŠ åˆ°ç‰ˆæœ¬åº“*/
+git diff HEAD --file.txt                                      /**æŸ¥çœ‹å·¥ä½œåŒºå’Œç‰ˆæœ¬åº“é‡Œé¢æœ€æ–°ç‰ˆæœ¬çš„åŒºåˆ«*/
+git checkout -- file.txt                                      /**æ’¤é”€å·¥ä½œåŒºçš„ä¿®æ”¹*/
+git reset HEAD file.txt                                       /**å¯ä»¥æŠŠæš‚å­˜åŒºçš„ä¿®æ”¹æ’¤é”€æ‰*/
+rm file.txt                                                   /**åˆ é™¤æ–‡ä»¶file.txt*/
+ssh-keygen -t rsa -C "youemail@email.com" Â                    /**åˆ›å»ºSSH Key*/
+åœ¨githubä¸Šé¢æ·»åŠ å…¬åŒ™
+git remote add origin git@github.com:linisme/learn-git.git    /**å»ºç«‹è¿œç¨‹ä»“åº“*/
+git push -u origin master                                     /**æ¨é€åˆ°è¿œç«¯ä»“åº“ï¼Œå‚æ•°uå°†æœ¬åœ°masterå’Œè¿œç«¯masterå»ºç«‹è¿æ¥ï¼Œä»¥åå¯ä»¥ç›´æ¥æ¨é€*/
+git push origin master          /**æ¨é€è¿œç«¯*/
+git remote add origin git@server-name:path/repo-name.git      /**å…³è”è¿œç¨‹åº“*/
+git clone git@github.com:linisme/repositories.git             /**ä»githubä»“åº“ä¸­å…‹éš†åˆ°æœ¬åœ°*/
 
 
 
