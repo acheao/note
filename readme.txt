@@ -6,4 +6,8 @@ git is free software
 
 
 
+
 。。。。。。。。。有冲突这里
+
+。。。。。。。。。hello world
+合并后
