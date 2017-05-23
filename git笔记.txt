@@ -44,3 +44,10 @@ git checkout -b dev origin/dev   /**创建远程分支到本地*/
 git pull                         /**先把最新的提交从远端抓取过来，在本地合并后再推送*/
 git pull如果提示"no tracking information" 说明本地分支和远端分支的链接关系没有创建
 git branch --set-upstream branch-name origin/branch-name  /**创建本地分支和远端分支的链接*/
+git tag v1.0                     /**设置当前分支的标签*/
+git tag                          /**查看标签*/
+git tag v1.2 756e456             /**对版本为756e456的commit打标签v1.2*/
+git show <tagname>               /**显示标签tagname的信息*/
+git tag -a v1.2 -m "说明文字" 756e456    /**参数-a标签名，-m说明文字*/
+git tag -d v1.2                  /**删除标签v1.2*/
+git push origin v1.0             /**将标签推送到远端*/
