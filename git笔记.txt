@@ -51,3 +51,7 @@ git show <tagname>               /**显示标签tagname的信息*/
 git tag -a v1.2 -m "说明文字" 756e456    /**参数-a标签名，-m说明文字*/
 git tag -d v1.2                  /**删除标签v1.2*/
 git push origin v1.0             /**将标签推送到远端*/
+git push origin --tags           /**一次性推送全部未推送的标签到远端*/
+git push origin :refs/tags/<tagname>  /**删除远端标签*/
+git config --global alias st status   /**配置别名，用st代替status*/
+搭建git服务器    Git Cheat Sheet
