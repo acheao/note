@@ -5,7 +5,7 @@ ls -ah                           /**ls即list  -a是参数all h即hide*/
 git add file.txt                 /**将file.txt放入版本库*/
 git commit -m  "版本描述"        /**提交并写入说明*/
 git status                       /**查看当前文件状态*/
-git diff                         /**查看差异*/
+git diff  file.txt               /**查看文件修改的内容*/
 git log --pretty=oneline         /**查看版本，参数--pretty=oneline*/
 git reset --hard HEAD^           /**回滚上一版本*/
 git reset --hard HEAD`100        /**返回上100版本*/
