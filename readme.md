@@ -1,4 +1,4 @@
 # note  
-java  学习笔记  
-mysql 学习笔记  
-git   学习笔记
+java 笔记  
+mysql 笔记  
+git 笔记
