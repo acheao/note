@@ -33,3 +33,6 @@ create table A as
 from B 
 where a.name = "值") 
 with data;
+grant select on department to acheao;
+grant update (budget) on department to acheao;将budget的更新权限赋予acheao用户
+revoke select on department from acheao;删除acheao在department表上的查询权限
