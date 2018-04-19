@@ -8,6 +8,11 @@ public class FinalParameter {
 		c = 9;
 //		≤ªƒ‹±ª∏≥÷µ
 //		c = 10;
+		final String str = "≤‚ ‘£∫"+"99";
+		final String str2 = "≤‚ ‘£∫"+String.valueOf(99);
+		System.out.println(str == "≤‚ ‘£∫99");
+		System.out.println(str2 == "≤‚ ‘£∫99");
+		System.out.println("≤‚ ‘£∫99" == "≤‚ ‘£∫99");
 		
 	}
 
