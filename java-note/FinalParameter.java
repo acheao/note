@@ -13,6 +13,11 @@ public class FinalParameter {
 		System.out.println(str == "≤‚ ‘£∫99");
 		System.out.println(str2 == "≤‚ ‘£∫99");
 		System.out.println("≤‚ ‘£∫99" == "≤‚ ‘£∫99");
+		System.out.println(str2.equals("≤‚ ‘£∫99"));
+//		true
+//		false
+//		true
+//		true
 	}
 
 }

@@ -13,7 +13,7 @@ public class TestEnum {
 			case SPRING:
 				System.out.println("´ºÌì£¬spring");
 				break;
-			case SUMMEER:
+			case SUMMEER:        
 				System.out.println("ÏÄÌì£¬summer");
 				break;
 			case FALL:
@@ -23,6 +23,6 @@ public class TestEnum {
 				System.out.println("¶¬Ìì£¬WINTER");
 				break;
 		}
-	}
+	}  
 
 }
