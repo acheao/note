@@ -3,8 +3,8 @@ public class InstanceofNote {
 	public static void main(String[] args){
 		Object obj = "obj";
 		String str = "str";
-		System.out.println("objÊÇObjectÀàµÄÊµÀı£º"+(obj instanceof Integer));
-		System.out.println("strÊÇObjectÀàµÄÊµÀı£º"+(str instanceof Object));		
+		System.out.println("objæ˜¯Objectç±»çš„å®ä¾‹ï¼š"+(obj instanceof Integer));
+		System.out.println("stræ˜¯Objectç±»çš„å®ä¾‹ï¼š"+(str instanceof Object));		
 		
 	}
 

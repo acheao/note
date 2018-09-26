@@ -11,16 +11,16 @@ public class TestEnum {
 	public static void judge(Season s){
 		switch(s){
 			case SPRING:
-				System.out.println("´ºÌì£¬spring");
+				System.out.println("æ˜¥å¤©ï¼Œspring");
 				break;
 			case SUMMEER:        
-				System.out.println("ÏÄÌì£¬summer");
+				System.out.println("å¤å¤©ï¼Œsummer");
 				break;
 			case FALL:
-				System.out.println("ÇïÌì£¬FALL");
+				System.out.println("ç§‹å¤©ï¼ŒFALL");
 				break;
 			case WINTER:
-				System.out.println("¶¬Ìì£¬WINTER");
+				System.out.println("å†¬å¤©ï¼ŒWINTER");
 				break;
 		}
 	}  
