@@ -6,7 +6,7 @@ public class NoteLoopContinue {
 			if(i==5){
 				continue;
 			}
-			System.out.println("这是i的值："+i);
+			System.out.println("杩欐槸i鐨勫�硷細"+i);
 			
 		}
 	}

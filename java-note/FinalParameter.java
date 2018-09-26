@@ -2,18 +2,18 @@
 public class FinalParameter {
 	public static void main(String[] args){
 		final int a = 3;
-//		²»ÄÜ±»¸³Öµ
+//		ä¸èƒ½è¢«èµ‹å€¼
 //		a = 8;
 		final int c;
 		c = 9;
-//		²»ÄÜ±»¸³Öµ
+//		ä¸èƒ½è¢«èµ‹å€¼
 //		c = 10;
-		final String str = "²âÊÔ£º"+"99";
-		final String str2 = "²âÊÔ£º"+String.valueOf(99);
-		System.out.println(str == "²âÊÔ£º99");
-		System.out.println(str2 == "²âÊÔ£º99");
-		System.out.println("²âÊÔ£º99" == "²âÊÔ£º99");
-		System.out.println(str2.equals("²âÊÔ£º99"));
+		final String str = "æµ‹è¯•ï¼š"+"99";
+		final String str2 = "æµ‹è¯•ï¼š"+String.valueOf(99);
+		System.out.println(str == "æµ‹è¯•ï¼š99");
+		System.out.println(str2 == "æµ‹è¯•ï¼š99");
+		System.out.println("æµ‹è¯•ï¼š99" == "æµ‹è¯•ï¼š99");
+		System.out.println(str2.equals("æµ‹è¯•ï¼š99"));
 //		true
 //		false
 //		true

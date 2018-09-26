@@ -1,7 +1,7 @@
 
 public class NoteChangeParameter {
 	public static void main(String[] args){
-		test(2,"数组元素1","数组元素2","数组元素3");
+		test(2,"鏁扮粍鍏冪礌1","鏁扮粍鍏冪礌2","鏁扮粍鍏冪礌3");
 	}
 	
 	public static void test(int a,String ... strings){
