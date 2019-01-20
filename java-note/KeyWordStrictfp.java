@@ -28,8 +28,7 @@ public class KeyWordStrictfp {
 		int n = 7;
 		int m = 2*++n;
 		System.out.println(m);
-		System.out.println(n);
-		
+		System.out.println(n);	
 		String d = null;
 		if(d != null && d.equals("")){
 			
@@ -42,9 +41,15 @@ public class KeyWordStrictfp {
 	 * +=
 	 * -=
 	 * &&短路,&非短路
+	 * a+=b+=c等价于a+=(b+=c)
+	 * instanceof
 	 */
 	public static strictfp void calculation(){
 		
 	}
+	public static int bigNumber(int a,int b){
+		int c = a<b?a:b;
+		return c;   
+	} 
 
 }
