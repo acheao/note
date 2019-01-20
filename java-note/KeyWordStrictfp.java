@@ -10,21 +10,21 @@ public class KeyWordStrictfp {
 		char b = 65;
 		System.out.println(a);
 		System.out.println(b);
-		boolean ÖĞÎÄ±äÁ¿Ãû = false;
-		System.out.println(ÖĞÎÄ±äÁ¿Ãû);
+		boolean ä¸­æ–‡å­—ç¬¦å˜é‡ = false;
+		System.out.println(ä¸­æ–‡å­—ç¬¦å˜é‡);
 		boolean g = Character.isJavaIdentifierPart(';');
 		boolean f = Character.isJavaIdentifierPart(50);
 		System.out.println(g);
 		System.out.println(f);
 		byte c = (byte)300;
-		//³¬³ö·¶Î§£¬cµÄÖµÎª44
+		//cçš„å€¼ä¸º44
 		System.out.println(c);
 		int i =7;
 		int j = 2*i++;
-		//jµÄÖµÎª14£¬iÎª8
+		//jçš„å€¼ä¸º14ï¼Œiçš„å€¼ä¸º8
 		System.out.println(j);
 		System.out.println(i);
-		//mµÄÖµÎª16,nÎª8
+		//mçš„å€¼ä¸º16,nçš„å€¼ä¸º8
 		int n = 7;
 		int m = 2*++n;
 		System.out.println(m);
@@ -33,6 +33,30 @@ public class KeyWordStrictfp {
 		if(d != null && d.equals("")){
 			
 		}
+		
+		String hello = "A";
+		String word = "666";
+		String hi = "hi";
+		int ha = 1;
+		String all = String.join(",", "A", "B", "C", "D", "E");
+		System.out.println(all);
+		String hw = "hello word";
+		int index = hw.offsetByCodePoints(1, 3);
+		System.out.println(index);
+		int cp = hw.codePointAt(index);
+		char four = hw.charAt(4);
+		System.out.println(four);
+		System.out.println(cp);
+		int[] codePoints =  hw.codePoints().toArray();
+		String test = new String(codePoints,0,codePoints.length);
+		System.out.println(test);
+		//å¿«ï¼Œå•çº¿ç¨‹ä¸å®‰å…¨
+		StringBuilder str = new StringBuilder();
+		str.append("ssss");
+		//çº¿ç¨‹å®‰å…¨
+		StringBuffer strBuffer = new StringBuffer();
+		strBuffer.append("11111111");
+		
 	}
 	/**
 	 * strictfp
@@ -40,9 +64,10 @@ public class KeyWordStrictfp {
 	 * double>flaot>long>int
 	 * +=
 	 * -=
-	 * &&¶ÌÂ·,&·Ç¶ÌÂ·
-	 * a+=b+=cµÈ¼ÛÓÚa+=(b+=c)
+	 * &&çŸ­è·¯Â·,&éçŸ­è·¯Â·
+	 * a+=b+=cç­‰ä»·äºa+=(b+=c)
 	 * instanceof
+	 * Stringä¸å¯å˜å­—ç¬¦ä¸²
 	 */
 	public static strictfp void calculation(){
 		
@@ -50,6 +75,7 @@ public class KeyWordStrictfp {
 	public static int bigNumber(int a,int b){
 		int c = a<b?a:b;
 		return c;   
+		
 	} 
 
 }
