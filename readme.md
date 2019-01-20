@@ -1,4 +1,6 @@
-# note  
-java 笔记  
-mysql 笔记  
-git 笔记
+## 记录复习java时的知识点和demo
+### 参考书籍
+- java核心技术卷
+- java疯狂讲义
+- Head First Java
+- thinking in java
