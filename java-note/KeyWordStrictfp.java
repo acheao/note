@@ -10,21 +10,21 @@ public class KeyWordStrictfp {
 		char b = 65;
 		System.out.println(a);
 		System.out.println(b);
-		boolean ä¸­æ–‡å­—ç¬¦å˜é‡ = false;
-		System.out.println(ä¸­æ–‡å­—ç¬¦å˜é‡);
+		boolean ÖĞÎÄ×Ö·û±äÁ¿ = false;
+		System.out.println(ÖĞÎÄ×Ö·û±äÁ¿);
 		boolean g = Character.isJavaIdentifierPart(';');
 		boolean f = Character.isJavaIdentifierPart(50);
 		System.out.println(g);
 		System.out.println(f);
 		byte c = (byte)300;
-		//cçš„å€¼ä¸º44
+		//cµÄÖµÎª44
 		System.out.println(c);
 		int i =7;
 		int j = 2*i++;
-		//jçš„å€¼ä¸º14ï¼Œiçš„å€¼ä¸º8
+		//jµÄÖµÎª14£¬iµÄÖµÎª8
 		System.out.println(j);
 		System.out.println(i);
-		//mçš„å€¼ä¸º16,nçš„å€¼ä¸º8
+		//mµÄÖµÎª16,nµÄÖµÎª8
 		int n = 7;
 		int m = 2*++n;
 		System.out.println(m);
@@ -50,13 +50,12 @@ public class KeyWordStrictfp {
 		int[] codePoints =  hw.codePoints().toArray();
 		String test = new String(codePoints,0,codePoints.length);
 		System.out.println(test);
-		//å¿«ï¼Œå•çº¿ç¨‹ä¸å®‰å…¨
+		//¿ì£¬µ¥Ïß³Ì²»°²È«
 		StringBuilder str = new StringBuilder();
 		str.append("ssss");
-		//çº¿ç¨‹å®‰å…¨
+		//Ïß³Ì°²È«
 		StringBuffer strBuffer = new StringBuffer();
-		strBuffer.append("11111111");
-		
+		strBuffer.append("11111111");		
 	}
 	/**
 	 * strictfp
@@ -64,10 +63,10 @@ public class KeyWordStrictfp {
 	 * double>flaot>long>int
 	 * +=
 	 * -=
-	 * &&çŸ­è·¯Â·,&éçŸ­è·¯Â·
-	 * a+=b+=cç­‰ä»·äºa+=(b+=c)
+	 * &&¶ÌÂ·²¢,&·Ç¶ÌÂ·²¢
+	 * a+=b+=cµÈ¼ÛÓÚa+=(b+=c)
 	 * instanceof
-	 * Stringä¸å¯å˜å­—ç¬¦ä¸²
+	 * String²»¿É±ä×Ö·û´®
 	 */
 	public static strictfp void calculation(){
 		
