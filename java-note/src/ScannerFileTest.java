@@ -17,6 +17,10 @@ public class ScannerFileTest {
 			System.out.println(sc1.nextLine());
 		}
 		
+//		printf方法
+		String name = "acheao";
+		int age = 20;
+		System.out.printf("hello, %s . next year ,you'will be %d",name ,age);
 	}
 
 }

@@ -7,8 +7,10 @@ public class Note {
 			}
 			System.out.println(i);
 		}
+		System.out.println("---------");
 	}
 
 }
 //0
 //1
+//---------
