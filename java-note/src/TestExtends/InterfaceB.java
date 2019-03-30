@@ -8,5 +8,5 @@ public interface InterfaceB {
 	default void methodTest(){
 		System.out.println("BBBBBBBB");
 	}
-
+ 
 }

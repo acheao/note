@@ -4,7 +4,8 @@ import org.apache.log4j.Logger;
 
 public class TestLog4j {
 	public static void main(String[] args) {  
-        Logger logger = Logger.getLogger(TestLog4j.class);  
-        logger.info("zhujiadun");  
+        Logger logger = Logger.getLogger(TestLog4j.class); 
+        logger.debug("this is debug");
+        logger.info("this is info");  
     }  
 }
