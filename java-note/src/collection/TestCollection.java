@@ -24,10 +24,10 @@ public class TestCollection {
 			String s = it.next();
 			System.out.println(s+"===========");
 		}
-		
-//		迭代器的指针没有回调，因此只输出一次
 //		lambda表达式
 		it.forEachRemaining(s -> System.out.println(s));
+//		迭代器的指针没有回调，因此只输出一次
+
 	}
 	
 }
