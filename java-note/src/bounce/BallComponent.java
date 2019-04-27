@@ -7,13 +7,13 @@ import java.util.ArrayList;
 
 import javax.swing.JPanel;
 
+
 public class BallComponent extends JPanel{
 	private static final int DEFAULT_WIDTH = 450;
 	private static final int DEFAULT_HEIGHT = 350;
 	
 	private java.util.List<Ball> balls = new ArrayList<>();
-	
-	public void add(Ball b){
+	public synchronized void add(Ball b){
 		balls.add(b);
 	}
 	public synchronized void paintComponent(Graphics g){
@@ -28,3 +28,4 @@ public class BallComponent extends JPanel{
 	}
 
 }
+   
