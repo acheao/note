@@ -1,9 +1,7 @@
-## java知识点和demo
-### 参考书籍
-- java核心技术卷
-- java疯狂讲义
-- Head First Java
-- thinking in java
-- java程序设计
-
-[测试超连接](book/1.md)
+## Acheao的开发笔记 ##
+ 
+### 目录
+- [sql常用脚本](book/sql/part-1.md)
+- [Git常用命令]()
+- [Linux脚本]()
+- [java笔记]()
