@@ -6,7 +6,7 @@ https://acheao.github.io 但并非任何环境都能方便使用HEXO，所以将
 ### 目录
 * [SQL常用脚本](book/sql/part-1.md)
     - [oracle]()
-    - [mysql]()
+    - [mysql](book/sql/part-1.md#mysql)
 * [Git常用命令]()
 * [Linux脚本]()
 * [JAVA笔记]()

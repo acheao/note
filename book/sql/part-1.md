@@ -30,4 +30,5 @@ select ename,sal*12 annual_sal from emp; --别名
 select ename,sal*12 "annual sal" from emp; --别名保持空格和小写
 select sal*12+comm from emp; --含有null表达式的字符运算为空值，即comm为null会使整个结果为null
 ```
+### mysql ###
 		 
