@@ -20,10 +20,11 @@ desc tablename;  --描述一张表
 sqlplus /nolog
 sql>conn /as sysdba;
 sql>alter user scott account unlock;
+sql>alter user username identified by password;
 ```
 * select语句
 ```
-select 2*3 from dual --dual表
+select 2*3 from dual; --dual表
 select sysdate from dual;
 select ename,sal*12 annual_sal from emp; --别名
 select ename,sal*12 "annual sal" from emp; --别名保持空格和小写
