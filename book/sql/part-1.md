@@ -29,7 +29,7 @@ SELECT * FROM USER_TABLES;
 select 2*3 from dual; --dual表
 select sysdate from dual; --sysdate
 select ename,sal*12 annual_sal from emp; --别名
---select ename,sal*12 "annual sal" from emp;
+select ename,sal*12 "annual sal" from emp;
 --别名保持空格和小写,此时用双引号",而不使用单引号'
 select sal*12+comm from emp;
 --含有null表达式的字符运算为空值，即comm为null会使整个结果为null
@@ -41,7 +41,7 @@ select distinct comm from emp;
 --去掉重复的列，null也是一列
 select distinct sal,comm from emp;
 --去sal和comm组合后的重
- select ename from emp where ename like '_A%';
+select ename from emp where ename like '_A%';
 --_代表一个字母,%代表0个或多个字母，如果查询%可用转义字符\% 
 还可以用escape，如select ename from emp where ename like '%$%%' escape '$';
 ```
