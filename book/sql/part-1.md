@@ -43,7 +43,7 @@ select distinct sal,comm from emp;
 --去sal和comm组合后的重
 select ename from emp where ename like '_A%';
 --_代表一个字母,%代表0个或多个字母，如果查询%可用转义字符\% 
-还可以用escape，如select ename from emp where ename like '%$%%' escape '$';
+--还可以用escape，如select ename from emp where ename like '%$%%' escape '$';
 ```
 * oracle日期比较
 ```sql
