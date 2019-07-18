@@ -23,7 +23,7 @@ sql>alter user scott account unlock;
 sql>alter user username identified by password;
 ```
 * select语句
-```
+```sql
 SELECT * FROM USER_TABLES; 
 --查看用户有哪些表 
 select 2*3 from dual; --dual表
