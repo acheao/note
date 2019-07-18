@@ -23,9 +23,9 @@ sql>alter user scott account unlock;
 sql>alter user username identified by password;
 ```
 * select语句
-```
+```diff
 SELECT * FROM USER_TABLES; 
-+ --查看用户有哪些表 
+ + --查看用户有哪些表 
 select 2*3 from dual; --dual表
 select sysdate from dual; --sysdate
 select ename,sal*12 annual_sal from emp; --别名
