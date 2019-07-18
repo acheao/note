@@ -6,24 +6,24 @@ sqlplus username/password@//host:port/sid
 * 赋予scott用户dba权限
 ```sql
 sqlplus /nolog
-sql>conn /as sysdba;
-sql>select username from dba_users;
-sql>grant dba to scott;   --赋予batch用户dba权限
-sql>revoke dba from scott;  --解除batch用户dba权限
+conn /as sysdba;
+select username from dba_users;
+grant dba to scott;   --赋予batch用户dba权限
+revoke dba from scott;  --解除batch用户dba权限
 ```
 * command命令
-```
+```sql
 desc tablename;  --描述一张表
 ```
 * 解锁用户scott
-```
+```sql
 sqlplus /nolog
-sql>conn /as sysdba;
-sql>alter user scott account unlock;
-sql>alter user username identified by password;
+conn /as sysdba;
+alter user scott account unlock;
+alter user username identified by password;
 ```
 * select语句
-```oracle
+```sql
 SELECT * FROM USER_TABLES; 
 --查看用户有哪些表 
 select 2*3 from dual; --dual表
@@ -46,7 +46,7 @@ select distinct sal,comm from emp;
 还可以用escape，如select ename from emp where ename like '%$%%' escape '$';
 ```
 * oracle日期比较
-```
+```sql
  date
 ```
 
