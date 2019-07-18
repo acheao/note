@@ -26,7 +26,7 @@ sql>alter user username identified by password;
 ```
 SELECT * FROM USER_TABLES; 
 --查看用户有哪些表 
-/*select 2*3 from dual; --dual表*/
+select 2*3 from dual; --dual表
 select sysdate from dual; --sysdate
 select ename,sal*12 annual_sal from emp; --别名
 --select ename,sal*12 "annual sal" from emp;
