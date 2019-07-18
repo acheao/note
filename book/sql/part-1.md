@@ -1,10 +1,10 @@
 ### oracle ###
 * 远程登录
-```  
+```sql
 sqlplus username/password@//host:port/sid
 ```
 * 赋予scott用户dba权限
-```
+```sql
 sqlplus /nolog
 sql>conn /as sysdba;
 sql>select username from dba_users;
@@ -23,7 +23,7 @@ sql>alter user scott account unlock;
 sql>alter user username identified by password;
 ```
 * select语句
-```sql
+```oracle
 SELECT * FROM USER_TABLES; 
 --查看用户有哪些表 
 select 2*3 from dual; --dual表
