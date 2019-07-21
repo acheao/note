@@ -19,7 +19,7 @@ desc tablename;  --描述一张表
 ```sql
 sqlplus /nolog
 conn /as sysdba;
-alter user scott account unlock;
+alter user username account unlock;
 alter user username identified by password;
 ```
 * select语句
@@ -44,6 +44,27 @@ select distinct sal,comm from emp;
 select ename from emp where ename like '_A%';
 --_代表一个字母,%代表0个或多个字母，如果查询%可用转义字符\% 
 --还可以用escape，如select ename from emp where ename like '%$%%' escape '$';
+```
+* function
+```sql
+select lower(rowname) from tablename;
+--lower转成小写
+select rowname from emp where lower(rowname) like '_a%';
+--筛选第二个字母为A或者a的列
+select rowname from emp where rowname like '_a%' or rowname like '_A%';
+--筛选第二个字母为A或者a的列
+select upper('aaa') from dual;
+--upper转成大写
+select substr(ename,2,3) from emp;
+--从第二字符截,一共截三个字符
+select chr(65) from dual;
+--将ascii码转成字母mysql为char()
+select ascii('A') from dual;
+--将字母转成ascii码
+select round(12.343) from dual;
+--round四舍五入成整数
+select round(12.343,2) from dual;
+--保留小数点后两位
 ```
 * oracle日期比较
 ```sql
