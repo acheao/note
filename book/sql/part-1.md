@@ -65,10 +65,15 @@ select round(12.343) from dual;
 --round四舍五入成整数
 select round(12.343,2) from dual;
 --保留小数点后两位
+select to_char(sal,'$999,999.999') from emp;
+--数字转成带美元符号格式的字符串
+select to_char(sal,'L999,999.999') from emp;
+--L本地化格式select to_char(sal,'L000,000.000') from emp;0可以补位对齐，9不补位
 ```
-* oracle日期比较
+* oracle日期
 ```sql
- date
+select to_char(sysdate ,'YYYY-MM-DD HH:MM:SS') from emp;
+--格式化日期,'HH24:MM:SS'为24小时制
 ```
 
 ### mysql ###
