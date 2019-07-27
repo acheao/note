@@ -73,7 +73,7 @@ select to_char(sal,'L999,999.999') from emp;
 * oracle日期
 ```sql
 select to_char(sysdate ,'YYYY-MM-DD HH:MM:SS') from emp;
---格式化日期,'HH24:MM:SS'为24小时制
+--格式化日期,'HH24:MM:SS'为24小时制，'HH:MM:SS'为12小时制
 ```
 
 ### mysql ###
