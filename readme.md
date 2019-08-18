@@ -10,4 +10,4 @@ https://acheao.github.io 但并非任何环境都能方便使用HEXO，所以将
 * [数据结构与算法]()
 * [Git常用命令]()
 * [Linux脚本]()
-* [JAVA笔记]()
+* [JAVA笔记](book/java/spring.md)
