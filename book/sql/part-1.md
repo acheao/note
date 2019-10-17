@@ -7,9 +7,9 @@ sqlplus username/password@//host:port/sid
 ```sql
 sqlplus /nolog
 conn /as sysdba;
-select username from dba_users;
-grant dba to scott;   --赋予batch用户dba权限
-revoke dba from scott;  --解除batch用户dba权限
+select username from dba_users;  --查找用户名，需要dba权限
+grant dba to scott;   --赋予scott用户dba权限
+revoke dba from scott;  --解除scott用户dba权限
 ```
 * command命令
 ```sql
@@ -20,7 +20,7 @@ desc tablename;  --描述一张表
 sqlplus /nolog
 conn /as sysdba;
 alter user username account unlock;
-alter user username identified by password;
+alter user username identified by password;   --将用户密码改成password
 ```
 * select语句
 ```sql
