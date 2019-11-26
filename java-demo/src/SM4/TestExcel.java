@@ -21,33 +21,33 @@ public class TestExcel {
 		int inLen=16,ENCRYPT=1,DECRYPT=0,inlen1=32;
         try {
             fis = new FileInputStream("C:\\Users\\linc\\Desktop\\model\\encryption\\ACE54654544843742398.xls");
-            // Ȼ���ٴ����������д�뱾��
-            // ������Ҳ����һ��������ó�ÿ�μ��ܵĿ�Ĵ�С�����������С����������
+            // 然后再从这个缓存中写入本地
+            // 这里面也可以一般可以设置成每次加密的块的大小（或者这个大小的整数倍）
             byte data[] = new byte[16];
             byte out[] = new byte[16];
             byte in[] = new byte[16];
-            // �������Ҫ�����Ŀ¼
+            // 这个就是要输出的目录
             fos = new FileOutputStream("C:\\Users\\linc\\Desktop\\model\\decrypt\\ACE54654544843742398.xls");
-            // ���ڱ���Ƿ��Ƕ�ȡ���ļ���ĩβ�ˣ�
-            // �ڶ�����ֽ������棬ʹ��ĳЩ��ȡ���������Է���ÿ�ζ�ȡ���ֽ�����
-            // ��������ļ��Ľ�β�������ٶ�ȡ�����ݣ��ͷ���-1
+            // 用于标记是否是读取到文件的末尾了，
+            // 在读入的字节流里面，使用某些读取函数，可以返回每次读取的字节数，
+            // 如果到了文件的结尾，不能再读取到内容，就返回-1
             int len = -1;
-            // �����ݽ��ж��뵽ָ����С�Ļ���飬ֱ����ȡ���ļ��Ľ���Ϊֹ
+            // 将内容进行读入到指定大小的缓存块，直到读取到文件的结束为止
             while (-1 != (len = fis.read(data))) {
             	if(len != 16){
             		in = data;
             	}else{
-            		System.out.println(Arrays.toString(data)+"����");
+            		System.out.println(Arrays.toString(data)+"加密");
             		sm4.sms4(data, inLen, key, in, DECRYPT);
-            		System.out.println(Arrays.toString(in)+"����");
+            		System.out.println(Arrays.toString(in)+"解密");
             	}
             	
                 fos.write(in, 0, len);
-                // ��������ܹ�д��ֱ������������д�룬
-                // ������Ҫ�ȵ��ر�����������ʱ�䣩ʱ�����д��
+                // 这个方法能够写到直接往磁盘里面写入，
+                // 而不是要等到关闭流（等其他时间）时间进行写入
                 fos.flush();
             }
-            // �ر��ļ������������
+            // 关闭文件的输出输入流
             fis.close();
             fos.close();
         } catch (IOException e) {
@@ -64,34 +64,34 @@ public class TestExcel {
 		int inLen=16,ENCRYPT=1,DECRYPT=0,inlen1=32;
         try {
             fis = new FileInputStream("C:\\Users\\linc\\Desktop\\model\\origin\\ACE54654544843742398.xls");
-            // Ȼ���ٴ����������д�뱾��
-            // ������Ҳ����һ��������ó�ÿ�μ��ܵĿ�Ĵ�С�����������С����������
+            // 然后再从这个缓存中写入本地
+            // 这里面也可以一般可以设置成每次加密的块的大小（或者这个大小的整数倍）
             byte data[] = new byte[16];
             byte out[] = new byte[16];
             byte in[] = new byte[16];
-            // �������Ҫ�����Ŀ¼
+            // 这个就是要输出的目录
             fos = new FileOutputStream("C:\\Users\\linc\\Desktop\\model\\encryption\\ACE54654544843742398.xls");
-            // ���ڱ���Ƿ��Ƕ�ȡ���ļ���ĩβ�ˣ�
-            // �ڶ�����ֽ������棬ʹ��ĳЩ��ȡ���������Է���ÿ�ζ�ȡ���ֽ�����
-            // ��������ļ��Ľ�β�������ٶ�ȡ�����ݣ��ͷ���-1
+            // 用于标记是否是读取到文件的末尾了，
+            // 在读入的字节流里面，使用某些读取函数，可以返回每次读取的字节数，
+            // 如果到了文件的结尾，不能再读取到内容，就返回-1
             int len = -1;
-            // �����ݽ��ж��뵽ָ����С�Ļ���飬ֱ����ȡ���ļ��Ľ���Ϊֹ
+            // 将内容进行读入到指定大小的缓存块，直到读取到文件的结束为止
             while (-1 != (len = fis.read(data))) {
             	
             	if(len != 16){
             		out = data;
             		
             	}else{
-            		System.out.println(Arrays.toString(data)+"ԭʼ");
+            		System.out.println(Arrays.toString(data)+"原始");
             		sm4.sms4(data, inLen, key, out, ENCRYPT);
-            		System.out.println(Arrays.toString(out)+"����");
+            		System.out.println(Arrays.toString(out)+"加密");
             	}
                 fos.write(out, 0, len);
-                // ��������ܹ�д��ֱ������������д�룬
-                // ������Ҫ�ȵ��ر�����������ʱ�䣩ʱ�����д��
+                // 这个方法能够写到直接往磁盘里面写入，
+                // 而不是要等到关闭流（等其他时间）时间进行写入
                 fos.flush();
             }
-            // �ر��ļ������������
+            // 关闭文件的输出输入流
             fis.close();
             fos.close();
         } catch (IOException e) {

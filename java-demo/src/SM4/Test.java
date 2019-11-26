@@ -18,32 +18,32 @@ public class Test {
 		byte[] out1=new byte[32];
 		long starttime;
 		
-		//¼ÓÃÜ 128bit
+		//åŠ å¯† 128bit
 		starttime=System.nanoTime();
 		sm4.sms4(in, inLen, key, out, ENCRYPT);
-		System.out.println("¼ÓÃÜ1¸ö·Ö×éÖ´ĞĞÊ±¼ä£º "+(System.nanoTime()-starttime)+"ns");
-		System.out.println("¼ÓÃÜ½á¹û£º");
+		System.out.println("åŠ å¯†1ä¸ªåˆ†ç»„æ‰§è¡Œæ—¶é—´ï¼š "+(System.nanoTime()-starttime)+"ns");
+		System.out.println("åŠ å¯†ç»“æœï¼š");
 		for(int i=0;i<16;i++)
 			System.out.print(Integer.toHexString(out[i]&0xff)+"\t");
-		//½âÃÜ 128bit
+		//è§£å¯† 128bit
 		System.out.println();
 		sm4.sms4(out, inLen, key, in, DECRYPT);
-		System.out.println("½âÃÜ½á¹û£º");
+		System.out.println("è§£å¯†ç»“æœï¼š");
 		for(int i=0;i<16;i++)
 			System.out.print(Integer.toHexString(in[i]&0xff)+"\t");
-		//¼ÓÃÜ¶à¸ö·Ö×é
+		//åŠ å¯†å¤šä¸ªåˆ†ç»„
 		System.out.println();
 		sm4.sms4(in1, inlen1, key, out1, ENCRYPT);
-		System.out.println("\r¶à·Ö×é¼ÓÃÜ½á¹û£º");
+		System.out.println("\rå¤šåˆ†ç»„åŠ å¯†ç»“æœï¼š");
 		for(int i=0;i<32;i++)
 			System.out.print(Integer.toHexString(out1[i]&0xff)+"\t");
-		//½âÃÜ¶à¸ö·Ö×é
+		//è§£å¯†å¤šä¸ªåˆ†ç»„
 		System.out.println();
 		sm4.sms4(out1, inlen1, key, in1, DECRYPT);
-		System.out.println("¶à·Ö×é½âÃÜ½á¹û£º");
+		System.out.println("å¤šåˆ†ç»„è§£å¯†ç»“æœï¼š");
 		for(int i=0;i<32;i++)
 			System.out.print(Integer.toHexString(in1[i]&0xff)+"\t");
-		//1,000,000´Î¼ÓÃÜ
+		//1,000,000æ¬¡åŠ å¯†
 		System.out.println();
 		starttime=System.currentTimeMillis();
 		for(int i=1;i<1000000;i++)
@@ -52,8 +52,8 @@ public class Test {
 			in=out;
 		}
 		sm4.sms4(in, inLen, key, out, ENCRYPT);
-		System.out.println("\r1000000´Î¼ÓÃÜÖ´ĞĞÊ±¼ä£º "+(System.currentTimeMillis()-starttime)+"ms");
-		System.out.println("¼ÓÃÜ½á¹û£º");
+		System.out.println("\r1000000æ¬¡åŠ å¯†æ‰§è¡Œæ—¶é—´ï¼š "+(System.currentTimeMillis()-starttime)+"ms");
+		System.out.println("åŠ å¯†ç»“æœï¼š");
 		for(int i=0;i<16;i++)
 			System.out.print(Integer.toHexString(out[i]&0xff)+"\t");
 		

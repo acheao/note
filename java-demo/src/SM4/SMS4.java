@@ -142,7 +142,6 @@ public class SMS4 {
 			rk[r+3]=x[3]^=L2(mid);		//rk3=K7
 		}
 		
-		//����ʱ����Կʹ��˳��rk31,rk30,...,rk0
 		if(CryptFlag==DECRYPT)
 		{
 			for(r=0;r<16;r++)
