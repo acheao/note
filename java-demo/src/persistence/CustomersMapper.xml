@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="persistence.CustomersMapper">
+	
+	<insert id="insertOne" parameterType="mybatis.Customers" useGeneratedKeys="true" keyProperty="custId">
+		insert into customers
+			(cust_name,cust_address,cust_city,cust_state,cust_zip,cust_country,cust_contact,cust_email)
+		values
+			(#{custName},#{custAddress},#{custCity},#{custState},#{custZip},#{custCountry},#{custContact},#{custEmail})
+	</insert>
+
+</mapper>

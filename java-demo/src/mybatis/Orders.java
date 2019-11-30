@@ -3,27 +3,28 @@ package mybatis;
 import java.util.Date;
 
 public class Orders {
-	private int order_num;
-	private Date order_date;
-	private int cust_id;
-	public int getOrder_num() {
-		return order_num;
+	private int orderNum;
+	private Date orderDate;
+	private int custId;
+	public int getOrderNum() {
+		return orderNum;
 	}
-	public void setOrder_num(int order_num) {
-		this.order_num = order_num;
+	public void setOrderNum(int orderNum) {
+		this.orderNum = orderNum;
 	}
-	public Date getOrder_date() {
-		return order_date;
+	public Date getOrderDate() {
+		return orderDate;
 	}
-	public void setOrder_date(Date order_date) {
-		this.order_date = order_date;
+	public void setOrderDate(Date orderDate) {
+		this.orderDate = orderDate;
 	}
-	public int getCust_id() {
-		return cust_id;
+	public int getCustId() {
+		return custId;
 	}
-	public void setCust_id(int cust_id) {
-		this.cust_id = cust_id;
+	public void setCustId(int custId) {
+		this.custId = custId;
 	}
+	
 	
 	
 
