@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="persistence.ClassesMapper">
+	<select id="findClass" parameterType="int" resultMap="classResultMap">
+		SELECT * FROM class a LEFT JOIN students b on a.id = b.class_id where a.num = #{num}
+	</select>
+	
+	
+	<resultMap type="mybatis.Classes" id="classResultMap">
+		<id property="id" column="id" />
+		<result property="num" column="num" />
+		<result property="grade" column="grade" />
+		<collection property="studets" ofType="mybatis.Students">
+			<id property="id" column="id1"/>
+			<result property="name" column="name"/>
+			<result property="age" column="age"/>
+			<result property="sex" column="sex"/>
+			<result property="sex" column="sex"/>
+		</collection>
+	</resultMap>
+	
+</mapper>

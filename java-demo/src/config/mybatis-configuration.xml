@@ -24,5 +24,6 @@
   <mappers>
     <mapper resource="persistence/OrdersMapper.xml"/>
     <mapper resource="persistence/CustomersMapper.xml"/>
+    <mapper resource="persistence/ClassesMapper.xml"/>
   </mappers>
 </configuration>

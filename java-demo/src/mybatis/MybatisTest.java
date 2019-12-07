@@ -11,6 +11,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+import persistence.ClassesMapper;
 import persistence.CustomersMapper;
 import persistence.OrdersMapper;
 
@@ -33,7 +34,11 @@ public class MybatisTest {
 			System.out.println(order1.getOrderNum());
 			System.out.println(order1.getCustId());
 			
-			
+			ClassesMapper classMapper = session.getMapper(ClassesMapper.class);
+			Classes schoolClass = classMapper.findClass(2);
+			System.out.println(schoolClass.getStudets().size());
+			System.out.println(schoolClass.getGrade());
+			System.out.println(schoolClass.getStudets().get(0).getName());
 			CustomersMapper custMapper = session.getMapper(CustomersMapper.class);
 			Customers cust = new Customers();
 			/*cust.setCustName("测试");
@@ -51,7 +56,7 @@ public class MybatisTest {
 			or.setCustId(cust.getCustId());
 			mapper.add(or);*/
 			
-			List<Orders> orderList = new ArrayList();
+			/*List<Orders> orderList = new ArrayList();
 			for(int i=0;i<3;i++){
 				Orders or = new Orders();
 				or.setOrderDate(new Date());
@@ -62,7 +67,7 @@ public class MybatisTest {
 			mapper.batchInsert(orderList);
 			for(Orders or : orderList){
 				System.out.println(or.getOrderNum());
-			}
+			}*/
 			
 			/*Orders or = new Orders();
 			or.setOrderDate(new Date());
