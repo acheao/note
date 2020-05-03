@@ -26,7 +26,7 @@ public class RedisTest {
         }
         // 获取数据并输出
         Set<String> keys = jedis.keys("*"); 
-        Iterator<String> it=keys.iterator() ;   
+        Iterator<String> it = keys.iterator() ;   
         while(it.hasNext()){   
             String key = it.next();   
             System.out.println(key);   
