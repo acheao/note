@@ -1,5 +1,4 @@
-### about spring ###
-* spring笔记
+- 获取spring上下文
 ```java
 ApplicationContext context = new FileSystemXmlApplictaionContext("C:/Xxx.xml");
 Xxx xxx = context.getBean(Xxx.class);
