@@ -29,8 +29,21 @@ public class Binary {
 		System.out.println(h);
 		System.out.println(i);
 //		&&短路与，||短路或 ,(^异或，a^b,相同false;不同true)
-		
-		
+		String dd = "hi𝕆";
+		System.out.println(dd.length());//4
+        System.out.println(dd.codePointCount(0, dd.length()));//3
+        
+        int length = dd.length();
+        for(int j=0;j<length;i++) {
+            char charAt = dd.charAt(j);
+            System.out.println(Integer.toHexString(charAt));
+        }
+        int codePointCount = dd.codePointCount(0, length);
+        for(int j=0;j<codePointCount;j++) {
+            int charAt = dd.codePointAt(j);
+            System.out.println(Integer.toHexString(charAt));
+        }
+
 	}
 
 }
