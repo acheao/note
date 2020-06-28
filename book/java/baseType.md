@@ -17,4 +17,5 @@
 5>>>3 右移，左边补0
 ```
 obj instanceof class：obj是否使class的实例
+UTF-8字符可能是一个字节，也可能是两个，也可能是三个
 
