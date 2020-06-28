@@ -20,7 +20,25 @@ public class TestVector {
 		Map map = new HashMap();
 		map.put("11111", new Object());
 		String s = (String) map.getOrDefault("2", "Wrong");
-		System.out.print(s);
+		System.out.println(s);
+		byte a = 87;
+		byte b = 79;
+		byte c= (byte)(a+b);
+		System.out.println(c);
+		double d = 1e200;
+		float e = (float)d;
+		System.out.println(e);
+		int h = -11%3;
+		int l = -11/3;
+		System.out.println(h);
+		System.out.println(l);
+		int ll = 3;
+		int ds = (++ll);
+		System.out.println(ll);
+		System.out.println(ds);
+		boolean o = false;
+		boolean dd = false;
+		System.out.println(o^dd);
 		
 	}
 

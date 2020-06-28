@@ -29,20 +29,29 @@ public class Binary {
 		System.out.println(h);
 		System.out.println(i);
 //		&&短路与，||短路或 ,(^异或，a^b,相同false;不同true)
-		String dd = "hi𝕆";
+		String dd = "hi𝕆343";
+		String oo = "hio";
 		System.out.println(dd.length());//4
         System.out.println(dd.codePointCount(0, dd.length()));//3
+        System.out.println(oo.length());//3
+        System.out.println(oo.codePointCount(0, oo.length()));//3
         
         int length = dd.length();
-        for(int j=0;j<length;i++) {
+        for(int j=0;j<length;j++) {
             char charAt = dd.charAt(j);
             System.out.println(Integer.toHexString(charAt));
         }
         int codePointCount = dd.codePointCount(0, length);
         for(int j=0;j<codePointCount;j++) {
-            int charAt = dd.codePointAt(j);
-            System.out.println(Integer.toHexString(charAt));
+            int codePoint = dd.codePointAt(j);
+            System.out.println(Integer.toHexString(codePoint));
         }
+        //偏移字符的索引数，因为辅助字符不止两个字节
+        int cp = dd.offsetByCodePoints(1, 2);
+        int ss = dd.codePointAt(cp);
+        System.out.println(Integer.toHexString(ss));
+        
+        
 
 	}
 
