@@ -1,0 +1,7 @@
+1. APPEND key value (字符串)
+2. EXISTS key
+3. GETRANGE key 0 -1
+4. BITCOUNT key 
+    BITCOUNT key 0 -1
+5. SETBIT key 10 1
+6. 

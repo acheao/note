@@ -1,0 +1,6 @@
+-options中有时会使用选项的完整名字，此时使用--,例如--help
+如果命令太长可以用\Enter换行,其中\代表转义
+date +%Y/%m/%d
+date +%H:%M
+date "+%Y-%m-%d %H:%M:%S"
+date "+%Y/%m/%d %H:%M:%S"

@@ -1,0 +1,4 @@
+1、spring手动获得Bean
+ApplicationContext context = new FileSystemXmlApplictaionContext("C:/Xxx.xml");
+Xxx xxx = context.getBean(Xxx.class);
+ApplicationContext context = new ClassPathXmlApplictionContext("Xmm.xml");
