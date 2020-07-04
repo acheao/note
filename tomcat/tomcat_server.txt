@@ -1,0 +1,7 @@
+1、URL传参中文，后台乱码
+apache-tomcat-6.0.53/conf/server.xml
+添加 URIEncoding="utf-8"
+<Connector port="8080" protocol="HTTP/1.1"
+connectionTimeout="20000"
+redirectPort="8443" 
+URIEncoding="utf-8" />

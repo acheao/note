@@ -1,0 +1,6 @@
+1、CentOS防火墙开放8080端口
+firewall-cmd --zone=public --add-port=8080/tcp --permanent
+2、重启防火墙使生效
+firewall-cmd --reload
+3、列出防火墙开放的端口
+firewall-cmd --list-ports

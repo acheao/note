@@ -1,0 +1,2 @@
+1、生成uuid函数uuid()
+select uuid() as uuid;
