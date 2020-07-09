@@ -1,0 +1,28 @@
+2019-11-24 22:14:35,374 DEBUG [main] org.apache.ibatis.logging.LogFactory.setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2019-11-24 22:14:35,396 DEBUG [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2019-11-24 22:14:35,396 DEBUG [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2019-11-24 22:14:35,396 DEBUG [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2019-11-24 22:14:35,396 DEBUG [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2019-11-24 22:14:35,456 DEBUG [main] org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection - Opening JDBC Connection
+2019-11-24 22:14:35,696 DEBUG [main] org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection - Created connection 601893033.
+2019-11-24 22:14:35,696 DEBUG [main] org.apache.ibatis.transaction.jdbc.JdbcTransaction.setDesiredAutoCommit - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@23e028a9]
+2019-11-24 22:14:35,708 DEBUG [main] persistence.orders.selectOrders.debug - ==>  Preparing: select * from orders where cust_id = ? 
+2019-11-24 22:14:35,735 DEBUG [main] persistence.orders.selectOrders.debug - ==> Parameters: 10003(Integer)
+2019-11-24 22:14:35,760 DEBUG [main] persistence.orders.selectOrders.debug - <==      Total: 1
+2019-11-24 22:14:35,763 DEBUG [main] org.apache.ibatis.transaction.jdbc.JdbcTransaction.resetAutoCommit - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@23e028a9]
+2019-11-24 22:14:35,766 DEBUG [main] org.apache.ibatis.transaction.jdbc.JdbcTransaction.close - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@23e028a9]
+2019-11-24 22:14:35,766 DEBUG [main] org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection - Returned connection 601893033 to pool.
+2019-11-24 22:15:24,603 DEBUG [main] org.apache.ibatis.logging.LogFactory.setImplementation - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2019-11-24 22:15:24,625 DEBUG [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2019-11-24 22:15:24,625 DEBUG [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2019-11-24 22:15:24,625 DEBUG [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2019-11-24 22:15:24,625 DEBUG [main] org.apache.ibatis.datasource.pooled.PooledDataSource.forceCloseAll - PooledDataSource forcefully closed/removed all connections.
+2019-11-24 22:15:24,684 DEBUG [main] org.apache.ibatis.transaction.jdbc.JdbcTransaction.openConnection - Opening JDBC Connection
+2019-11-24 22:15:24,928 DEBUG [main] org.apache.ibatis.datasource.pooled.PooledDataSource.popConnection - Created connection 601893033.
+2019-11-24 22:15:24,928 DEBUG [main] org.apache.ibatis.transaction.jdbc.JdbcTransaction.setDesiredAutoCommit - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@23e028a9]
+2019-11-24 22:15:24,942 DEBUG [main] persistence.orders.selectOrders.debug - ==>  Preparing: select * from orders where cust_id = ? 
+2019-11-24 22:15:24,966 DEBUG [main] persistence.orders.selectOrders.debug - ==> Parameters: 10003(Integer)
+2019-11-24 22:15:24,988 DEBUG [main] persistence.orders.selectOrders.debug - <==      Total: 1
+2019-11-24 22:15:24,990 DEBUG [main] org.apache.ibatis.transaction.jdbc.JdbcTransaction.resetAutoCommit - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@23e028a9]
+2019-11-24 22:15:24,995 DEBUG [main] org.apache.ibatis.transaction.jdbc.JdbcTransaction.close - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@23e028a9]
+2019-11-24 22:15:24,995 DEBUG [main] org.apache.ibatis.datasource.pooled.PooledDataSource.pushConnection - Returned connection 601893033 to pool.
