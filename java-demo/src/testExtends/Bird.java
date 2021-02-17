@@ -1,4 +1,4 @@
-package TestExtends;
+package testExtends;
 
 public class Bird {
 	private String eye = "eye";

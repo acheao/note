@@ -1,4 +1,4 @@
-package TestExtends;
+package testExtends;
 
 import java.awt.Point;
 import java.util.ArrayList;

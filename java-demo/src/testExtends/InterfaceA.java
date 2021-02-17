@@ -1,4 +1,4 @@
-package TestExtends;
+package testExtends;
 
 public interface InterfaceA {
 	public static void method(){
