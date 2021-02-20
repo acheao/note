@@ -77,4 +77,48 @@ select to_char(sysdate ,'YYYY-MM-DD HH:MM:SS') from emp;
 ```
 
 ### mysql ###
-		 
+* 查看状态命令
+```sql
+systemctl status mysqld.service 
+```
+* 忘记密码时重置root密码
+```
+vi /etc/my.cnf
+```
+```
+# For advice on how to change settings please see
+# http://dev.mysql.com/doc/refman/5.7/en/server-configuration-defaults.html
+
+[mysqld]
+#
+# Remove leading # and set to the amount of RAM for the most important data
+# cache in MySQL. Start at 70% of total RAM for dedicated server, else 10%.
+# innodb_buffer_pool_size = 128M
+#
+# Remove leading # to turn on a very important data integrity option: logging
+# changes to the binary log between backups.
+```
+[mysqld]下面添加skip-grant-tables
+```
+service mysqld restart 重启mysql服务
+mysql -u root
+mysql>update mysql.user set authentication_string=password('newpasssword') where user='root';
+mysql>flush privileges;
+mysql>quit
+```
+将/etc/my.cnf还原
+```
+service mysqld restart 重启mysql服务
+```
+* 允许外部IP访问
+```
+mysql -u root -p
+mysql>grant all privileges on *.* to 'root'@'%' identified by 'password' with grant option;
+mysql>flush privileges;  --刷新权限
+```
+* MySQL 5.7.4版开始，设置用户密码过期
+```sql
+ALTER USER 'root'@'localhost' PASSWORD EXPIRE INTERVAL 250 DAY;
+ALTER USER 'root'@'localhost' PASSWORD EXPIRE NEVER;
+
+```
