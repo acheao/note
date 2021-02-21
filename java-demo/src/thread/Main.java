@@ -33,5 +33,7 @@ public class Main {
 //        new EaterThread("Alice",spoon,fork).start();
 //        new EaterThread("Bobby",fork,spoon).start();
 
+
+
     }
 }

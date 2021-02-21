@@ -8,6 +8,7 @@ public class TestThread {
 		};
 		
 		Thread t = new Thread(r);
+		System.out.println(t.getState());
 		t.start();
 		for(int i=0;i<10000;i++){
 			System.out.println("---------"+i);
