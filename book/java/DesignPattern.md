@@ -3,104 +3,104 @@
    * The class adapter way implements the target interface by inheriting from an adaptee class at compile-time (specificOperation()).
    * 对象适配器方式，使用委托
    * 类适配器方式，使用继承方式
-    ~~~java
-    public interface LightningPhone {
-        void recharge();
-        void useLightning();
-    }
+        ~~~java
+        public interface LightningPhone {
+            void recharge();
+            void useLightning();
+        }
 
-    public interface MicroUsbPhone {
-        void recharge();
-        void useMicroUsb();
-    }
+        public interface MicroUsbPhone {
+            void recharge();
+            void useMicroUsb();
+        }
 
-    public class Iphone implements LightningPhone {
-        private boolean connector;
+        public class Iphone implements LightningPhone {
+            private boolean connector;
 
 
-        @Override
-        public void recharge() {
-            if (connector) {
-                System.out.println("Recharge started");
-                System.out.println("Recharge finished");
-            } else {
-                System.out.println("Connect Lightning first");
+            @Override
+            public void recharge() {
+                if (connector) {
+                    System.out.println("Recharge started");
+                    System.out.println("Recharge finished");
+                } else {
+                    System.out.println("Connect Lightning first");
+                }
+            }
+
+            @Override
+            public void useLightning() {
+                connector = true;
+                System.out.println("Lightning connected");
             }
         }
 
-        @Override
-        public void useLightning() {
-            connector = true;
-            System.out.println("Lightning connected");
-        }
-    }
+        public class Android implements MicroUsbPhone{
+            private boolean connector;
 
-    public class Android implements MicroUsbPhone{
-        private boolean connector;
+            @Override
+            public void recharge() {
+                connector = true;
+                System.out.println("MicroUsb connected");
+            }
 
-        @Override
-        public void recharge() {
-            connector = true;
-            System.out.println("MicroUsb connected");
-        }
-
-        @Override
-        public void useMicroUsb() {
-            if (connector) {
-                System.out.println("Recharge started");
-                System.out.println("Recharge finished");
-            } else {
-                System.out.println("Connect MicroUsb first");
+            @Override
+            public void useMicroUsb() {
+                if (connector) {
+                    System.out.println("Recharge started");
+                    System.out.println("Recharge finished");
+                } else {
+                    System.out.println("Connect MicroUsb first");
+                }
             }
         }
-    }
 
-    public class LightningToMicroUsbAdapter implements MicroUsbPhone{
-        private final LightningPhone lightningPhone;
+        public class LightningToMicroUsbAdapter implements MicroUsbPhone{
+            private final LightningPhone lightningPhone;
 
 
-        public LightningToMicroUsbAdapter(LightningPhone lightningPhone) {
-            this.lightningPhone = lightningPhone;
+            public LightningToMicroUsbAdapter(LightningPhone lightningPhone) {
+                this.lightningPhone = lightningPhone;
+            }
+
+            @Override
+            public void recharge() {
+                lightningPhone.recharge();
+            }
+
+            @Override
+            public void useMicroUsb() {
+                System.out.println("MicroUsb connected");
+                lightningPhone.useLightning();
+            }
         }
 
-        @Override
-        public void recharge() {
-            lightningPhone.recharge();
+        public class AdapterDemo {
+            static void rechargeMicroUsbPhone(MicroUsbPhone phone) {
+                phone.useMicroUsb();
+                phone.recharge();
+            }
+
+            static void rechargeLightningPhone(LightningPhone phone) {
+                phone.useLightning();
+                phone.recharge();
+            }
+
+            public static void main(String[] args) {
+                Android android = new Android();
+                Iphone iPhone = new Iphone();
+
+                System.out.println("Recharging android with MicroUsb");
+                rechargeMicroUsbPhone(android);
+
+                System.out.println("Recharging iPhone with Lightning");
+                rechargeLightningPhone(iPhone);
+
+                System.out.println("Recharging iPhone with MicroUsb");
+                rechargeMicroUsbPhone(new LightningToMicroUsbAdapter (iPhone));
+            }
         }
-
-        @Override
-        public void useMicroUsb() {
-            System.out.println("MicroUsb connected");
-            lightningPhone.useLightning();
-        }
-    }
-
-    public class AdapterDemo {
-        static void rechargeMicroUsbPhone(MicroUsbPhone phone) {
-            phone.useMicroUsb();
-            phone.recharge();
-        }
-
-        static void rechargeLightningPhone(LightningPhone phone) {
-            phone.useLightning();
-            phone.recharge();
-        }
-
-        public static void main(String[] args) {
-            Android android = new Android();
-            Iphone iPhone = new Iphone();
-
-            System.out.println("Recharging android with MicroUsb");
-            rechargeMicroUsbPhone(android);
-
-            System.out.println("Recharging iPhone with Lightning");
-            rechargeLightningPhone(iPhone);
-
-            System.out.println("Recharging iPhone with MicroUsb");
-            rechargeMicroUsbPhone(new LightningToMicroUsbAdapter (iPhone));
-        }
-    }
-    ~~~
+        ~~~
 
 2. 模板模式Template Method
    1. 在父类中定义处理流程的框架，在子类中实现具体处理的模式，称为模板模式。
