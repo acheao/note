@@ -1,8 +1,8 @@
 1. 适配器模式Adapter
-   * The object adapter way implements the target interface by delegating to an adaptee object at run-time (adaptee.specificOperation()).
-   * The class adapter way implements the target interface by inheriting from an adaptee class at compile-time (specificOperation()).
-   * 对象适配器方式，使用委托
-   * 类适配器方式，使用继承方式
+   - The object adapter way implements the target interface by delegating to an adaptee object at run-time (adaptee.specificOperation()).
+   - The class adapter way implements the target interface by inheriting from an adaptee class at compile-time (specificOperation()).
+   - 对象适配器方式，使用委托
+   - 类适配器方式，使用继承方式
         ~~~java
         public interface LightningPhone {
             void recharge();
@@ -103,7 +103,7 @@
         ~~~
 
 2. 模板模式Template Method
-   1. 在父类中定义处理流程的框架，在子类中实现具体处理的模式，称为模板模式。
+   - 在父类中定义处理流程的框架，在子类中实现具体处理的模式，称为模板模式。
         ~~~java
         public abstract class AbstractDisplay {
             public abstract void open();
@@ -188,7 +188,7 @@
         }
         ~~~
 3. 工厂模式Factory Method
-   1. 这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。在工厂模式中，我们在创建对象时不会对客户端暴露创建逻辑，并且是通过使用一个共同的接口来指向新创建的对象。
+   - 这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。在工厂模式中，我们在创建对象时不会对客户端暴露创建逻辑，并且是通过使用一个共同的接口来指向新创建的对象。
         ~~~java
         public abstract class Product {
             public abstract void use();
