@@ -1,8 +1,8 @@
 1. 适配器模式Adapter
-   1. The object adapter way implements the target interface by delegating to an adaptee object at run-time (adaptee.specificOperation()).
-   2. The class adapter way implements the target interface by inheriting from an adaptee class at compile-time (specificOperation()).
-   3. 对象适配器方式，使用委托
-   4. 类适配器方式，使用继承方式
+   - The object adapter way implements the target interface by delegating to an adaptee object at run-time (adaptee.specificOperation()).
+   - The class adapter way implements the target interface by inheriting from an adaptee class at compile-time (specificOperation()).
+   - 对象适配器方式，使用委托
+   - 类适配器方式，使用继承方式
     ~~~java
     public interface LightningPhone {
         void recharge();
