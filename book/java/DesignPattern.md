@@ -104,155 +104,155 @@
 
 2. 模板模式Template Method
    1. 在父类中定义处理流程的框架，在子类中实现具体处理的模式，称为模板模式。
-    ~~~java
-    public abstract class AbstractDisplay {
-        public abstract void open();
-        public abstract void print();
-        public abstract void close();
-        public final void display(){
-            open();
-            for(int i = 0; i < 5; i++){
-                print();
+        ~~~java
+        public abstract class AbstractDisplay {
+            public abstract void open();
+            public abstract void print();
+            public abstract void close();
+            public final void display(){
+                open();
+                for(int i = 0; i < 5; i++){
+                    print();
+                }
+                close();
             }
-            close();
-        }
-
-    }
-
-    public class CharDisplay extends AbstractDisplay{
-        private char ch;
-
-        public CharDisplay(char ch){
-            this.ch = ch;
-        }
-
-        @Override
-        public void open() {
-            System.out.print("<<");
-        }
-
-        @Override
-        public void print() {
-            System.out.print(ch);
-        }
-
-        @Override
-        public void close() {
-            System.out.println(">>");
-        }
-    }
-
-    public class StringDisplay extends AbstractDisplay{
-        private String string;
-        private int wide;
-
-        public StringDisplay(String string){
-            this.string = string;
-            this.wide = string.getBytes().length;
-        }
-
-        @Override
-        public void open() {
-            printLine();
 
         }
 
-        @Override
-        public void print() {
-            System.out.println("|" + string + "|");
-        }
+        public class CharDisplay extends AbstractDisplay{
+            private char ch;
 
-        @Override
-        public void close() {
-            printLine();
-        }
-
-        private void printLine(){
-            System.out.print("+");
-            for(int i = 0; i < wide; i++){
-                System.out.print("-");
+            public CharDisplay(char ch){
+                this.ch = ch;
             }
-            System.out.println("+");
-        }
-    }
 
-    public class Main {
-        public static void main(String[] args) {
-            AbstractDisplay d1 = new CharDisplay('H');
-            AbstractDisplay d2 = new StringDisplay("Hello, World.");
-            AbstractDisplay d3 = new StringDisplay("你好，世界。");
-            d1.display();
-            d2.display();
-            d3.display();
+            @Override
+            public void open() {
+                System.out.print("<<");
+            }
+
+            @Override
+            public void print() {
+                System.out.print(ch);
+            }
+
+            @Override
+            public void close() {
+                System.out.println(">>");
+            }
         }
-    }
-    ~~~
+
+        public class StringDisplay extends AbstractDisplay{
+            private String string;
+            private int wide;
+
+            public StringDisplay(String string){
+                this.string = string;
+                this.wide = string.getBytes().length;
+            }
+
+            @Override
+            public void open() {
+                printLine();
+
+            }
+
+            @Override
+            public void print() {
+                System.out.println("|" + string + "|");
+            }
+
+            @Override
+            public void close() {
+                printLine();
+            }
+
+            private void printLine(){
+                System.out.print("+");
+                for(int i = 0; i < wide; i++){
+                    System.out.print("-");
+                }
+                System.out.println("+");
+            }
+        }
+
+        public class Main {
+            public static void main(String[] args) {
+                AbstractDisplay d1 = new CharDisplay('H');
+                AbstractDisplay d2 = new StringDisplay("Hello, World.");
+                AbstractDisplay d3 = new StringDisplay("你好，世界。");
+                d1.display();
+                d2.display();
+                d3.display();
+            }
+        }
+        ~~~
 3. 工厂模式Factory Method
    1. 这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。在工厂模式中，我们在创建对象时不会对客户端暴露创建逻辑，并且是通过使用一个共同的接口来指向新创建的对象。
-    ~~~java
-    public abstract class Product {
-        public abstract void use();
-    }
-
-    public abstract class Factory {
-        public final Product create(String owner){
-            Product product = createProduct(owner);
-            registerProduct(product);
-            return product;
-        }
-        protected abstract Product createProduct(String owner);
-        protected abstract void registerProduct(Product product);
-
-    }
-
-    public class IDCard extends Product{
-        private String owner;
-        IDCard(String owner){
-            System.out.println("制作" + owner + "的ID卡。");
-            this.owner = owner;
+        ~~~java
+        public abstract class Product {
+            public abstract void use();
         }
 
-        @Override
-        public void use() {
-            System.out.println("使用" + owner + "的ID卡");
+        public abstract class Factory {
+            public final Product create(String owner){
+                Product product = createProduct(owner);
+                registerProduct(product);
+                return product;
+            }
+            protected abstract Product createProduct(String owner);
+            protected abstract void registerProduct(Product product);
+
         }
 
-        public String getOwner(){
-            return owner;
+        public class IDCard extends Product{
+            private String owner;
+            IDCard(String owner){
+                System.out.println("制作" + owner + "的ID卡。");
+                this.owner = owner;
+            }
+
+            @Override
+            public void use() {
+                System.out.println("使用" + owner + "的ID卡");
+            }
+
+            public String getOwner(){
+                return owner;
+            }
+
         }
 
-    }
+        public class IDCardFactory extends Factory{
+            private List owners = new ArrayList();
 
-    public class IDCardFactory extends Factory{
-        private List owners = new ArrayList();
+            @Override
+            protected Product createProduct(String owner) {
+                return new IDCard(owner);
+            }
 
-        @Override
-        protected Product createProduct(String owner) {
-            return new IDCard(owner);
+            @Override
+            protected void registerProduct(Product product) {
+                owners.add(((IDCard)product).getOwner());
+            }
+
+            public List getOwners(){
+                return owners;
+            }
         }
 
-        @Override
-        protected void registerProduct(Product product) {
-            owners.add(((IDCard)product).getOwner());
+        public class Main {
+            public static void main(String[] args) {
+                Factory factory = new IDCardFactory();
+                Product card1 = factory.create("小明");
+                Product card2 = factory.create("小红");
+                Product card3 = factory.create("小刚");
+                card1.use();
+                card2.use();
+                card3.use();
+            }
         }
-
-        public List getOwners(){
-            return owners;
-        }
-    }
-
-    public class Main {
-        public static void main(String[] args) {
-            Factory factory = new IDCardFactory();
-            Product card1 = factory.create("小明");
-            Product card2 = factory.create("小红");
-            Product card3 = factory.create("小刚");
-            card1.use();
-            card2.use();
-            card3.use();
-        }
-    }
-    ~~~
+        ~~~
 4. 单例模式Singleton
    1. 
 5. 访问者模式visitor
