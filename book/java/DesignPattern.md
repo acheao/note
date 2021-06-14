@@ -254,6 +254,9 @@
         }
         ~~~
 4. 单例模式Singleton
-   1. 
-5. 访问者模式visitor
-6. 装饰者模式
+5. 原型模式Prototype
+6. 建造者模式Builder
+
+
+7. 访问者模式visitor
+8. 装饰者模式
