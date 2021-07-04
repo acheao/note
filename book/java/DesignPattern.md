@@ -256,7 +256,9 @@
 4. 单例模式Singleton
 5. 原型模式Prototype
 6. 建造者模式Builder
-
-
-7. 访问者模式visitor
-8. 装饰者模式
+7. 抽象工厂模式Abstarct Factory
+8. 桥接模式Bridge
+9. 策略模式Strategy
+10. 组合模式Composite
+11. 访问者模式visitor
+12. 装饰者模式
