@@ -19,3 +19,5 @@
 obj instanceof class：obj是否使class的实例
 UTF-8字符可能是一个字节，也可能是两个，也可能是三个
 
+![image](https://github.com/acheao/code-notes/blob/master/book/java/baseType.png)
+
