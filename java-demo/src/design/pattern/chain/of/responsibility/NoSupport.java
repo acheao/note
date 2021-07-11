@@ -1,0 +1,12 @@
+package design.pattern.chain.of.responsibility;
+
+public class NoSupport extends Support {
+    public NoSupport(String name) {
+        super(name);
+    }
+
+    @Override
+    protected boolean resolve(Trouble trouble) {
+        return false;
+    }
+}

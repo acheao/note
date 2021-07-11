@@ -1,7 +1,0 @@
-1.查看git配置以及所在文件
-git config --list --show-origin
-2.命令行安装配置用户名和邮箱
-$ git config --global user.name "Acheao"
-$ git config --global user.email acheao@example.com
-
-
