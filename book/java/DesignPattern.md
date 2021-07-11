@@ -1,4 +1,5 @@
-1. 适配器模式Adapter
+1. 迭代器模式(Iterator)
+2. 适配器模式(Adapter)
    - The object adapter way implements the target interface by delegating to an adaptee object at run-time (adaptee.specificOperation()).
    - The class adapter way implements the target interface by inheriting from an adaptee class at compile-time (specificOperation()).
    - 对象适配器方式，使用委托
@@ -102,7 +103,7 @@
         }
         ~~~
 
-2. 模板模式Template Method
+3. 模板模式(Template Method)
    - 在父类中定义处理流程的框架，在子类中实现具体处理的模式，称为模板模式。
         ~~~java
         public abstract class AbstractDisplay {
@@ -187,7 +188,7 @@
             }
         }
         ~~~
-3. 工厂模式Factory Method
+4. 工厂模式(Factory Method)
    - 这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。在工厂模式中，我们在创建对象时不会对客户端暴露创建逻辑，并且是通过使用一个共同的接口来指向新创建的对象。
         ~~~java
         public abstract class Product {
@@ -253,12 +254,22 @@
             }
         }
         ~~~
-4. 单例模式Singleton
-5. 原型模式Prototype
-6. 建造者模式Builder
-7. 抽象工厂模式Abstarct Factory
-8. 桥接模式Bridge
-9. 策略模式Strategy
-10. 组合模式Composite
-11. 访问者模式visitor
-12. 装饰者模式
+5. 单例模式(Singleton)
+6. 原型模式(Prototype)
+7. 建造者模式(Builder)
+8. 抽象工厂模式(Abstarct Factory)
+9. 桥接模式(Bridge)
+10. 策略模式(Strategy)
+11. 组合模式(Composite)
+12. 装饰者模式(Decorator)
+13. 访问者模式(Visitor)
+14. 责任链模式(Chain of Responsibility)
+15. 外观模式(Facade)
+16. 中介者模式(Mediator)
+17. 观察者模式(Observer)
+18. 备忘录模式(Memento)
+19. 状态模式(State)
+20. 享元模式(Flyweight)
+21. 代理模式(Proxy)
+22. 命令模式(Command)
+23. 解释器模式(Interpreter)
