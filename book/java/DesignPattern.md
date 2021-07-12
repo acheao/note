@@ -1,9 +1,9 @@
 1. 迭代器模式(Iterator)
 2. 适配器模式(Adapter)
-   - The object adapter way implements the target interface by delegating to an adaptee object at run-time (adaptee.specificOperation()).
-   - The class adapter way implements the target interface by inheriting from an adaptee class at compile-time (specificOperation()).
-   - 对象适配器方式，使用委托
-   - 类适配器方式，使用继承方式
+ - The object adapter way implements the target interface by delegating to an adaptee object at run-time (adaptee.specificOperation()).
+ - The class adapter way implements the target interface by inheriting from an adaptee class at compile-time (specificOperation()).
+ - 对象适配器方式，使用委托
+ - 类适配器方式，使用继承方式
     ~~~java
     public interface LightningPhone {
         void recharge();
@@ -104,7 +104,7 @@
     ~~~
 
 3. 模板模式(Template Method)
-   - 在父类中定义处理流程的框架，在子类中实现具体处理的模式，称为模板模式。
+ - 在父类中定义处理流程的框架，在子类中实现具体处理的模式，称为模板模式。
     ~~~java
     public abstract class AbstractDisplay {
         public abstract void open();
@@ -189,7 +189,7 @@
     }
     ~~~
 4. 工厂模式(Factory Method)
-    - 这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。在工厂模式中，我们在创建对象时不会对客户端暴露创建逻辑，并且是通过使用一个共同的接口来指向新创建的对象。
+  - 这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。在工厂模式中，我们在创建对象时不会对客户端暴露创建逻辑，并且是通过使用一个共同的接口来指向新创建的对象。
     ~~~java
     public abstract class Product {
         public abstract void use();
@@ -255,6 +255,82 @@
     }
     ~~~
 5. 单例模式(Singleton)
+ - 懒汉式，线程不安全
+    ~~~java
+    public class Singleton{
+        private static Singleton instance;
+        private Singleton(){}
+        public static Singleton getInstance(){
+            if(instance == null){
+                instance = new Singleton();
+            }
+            return instance;
+        }
+    }
+    ~~~
+  - 懒汉式，线程安全
+    ~~~java
+    public class Singleton{
+        private static Singleton instance;
+        private Singleton(){}
+        //这里加锁了
+        public static synchronized getInstance(){
+            if(instance == null){
+                instance = new Singleton();
+            }
+            return instance;
+        }
+
+    }
+    ~~~
+ - 饿汉式，线程安全
+    ~~~java
+    public class Singleton{
+        private static Singleton instance = new Singleton();
+        private Singleton(){}
+        private static Singleton getInstance(){
+            return instance;
+        }
+    }   
+    ~~~
+ - 懒汉式，双重校验锁
+    ~~~java
+    public class Singleton{
+        private static Singleton instance;
+        private Singleton(){}
+        private static Singleton getInstance(){
+            if(instance == null){
+                synchronized(Singleton.class){
+                    if(instance == null){
+                        instance = new Singleton();
+                    }
+                }
+            }
+            return instance;
+        }
+    }
+    ~~~
+ - 登记式/静态内部类
+    ~~~java
+    public class Singleton{
+        private static class SingletonHolder{
+            private static final Singleton instance = new Singleton();
+        }
+        private Singleton(){}
+        public static Singleton getInstance(){
+            return SingletonHolder.instance;
+        }
+    }
+    ~~~
+ - 枚举实现单例模式
+    ~~~java
+    public enum Singleton{
+        INSTANCE;
+        public void someMethod(){
+            
+        }
+    }
+    ~~~
 6. 原型模式(Prototype)
 7. 建造者模式(Builder)
 8. 抽象工厂模式(Abstarct Factory)
